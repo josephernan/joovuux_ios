@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A18DDA67-872A-43A4-85FF-2FA1F35B14AF</string>
+	<key>IDESourceControlProjectName</key>
+	<string>JooVuuX</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>009441AEA45783F3E1DBA87A2A20CD73C48B54F5</key>
+		<string>https://github.com/kolyvan/kxmovie.git</string>
+		<key>ADB21CC9635DA0A59D3F480398DBC39A7F5A662E</key>
+		<string>https://bitbucket.org/BlazeSQ/joovuux.git</string>
+		<key>BC82FFF68D67255FBA61A9E4D85E435CCFCB56E5</key>
+		<string>https://bitbucket.org/sergeyzyg/joovoox.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JooVuuX.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>009441AEA45783F3E1DBA87A2A20CD73C48B54F5</key>
+		<string>../../Downloads/kxmovie</string>
+		<key>ADB21CC9635DA0A59D3F480398DBC39A7F5A662E</key>
+		<string>..</string>
+		<key>BC82FFF68D67255FBA61A9E4D85E435CCFCB56E5</key>
+		<string>..JooVuuX</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/BlazeSQ/joovuux.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>ADB21CC9635DA0A59D3F480398DBC39A7F5A662E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>ADB21CC9635DA0A59D3F480398DBC39A7F5A662E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JooVuuX</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BC82FFF68D67255FBA61A9E4D85E435CCFCB56E5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>JooVuuXJooVuuX</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>009441AEA45783F3E1DBA87A2A20CD73C48B54F5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>kxmovie</string>
+		</dict>
+	</array>
+</dict>
+</plist>

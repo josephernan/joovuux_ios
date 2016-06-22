@@ -1,0 +1,356 @@
+
+// To check if a library is compiled with CocoaPods you
+// can use the `COCOAPODS` macro definition which is
+// defined in the xcconfigs so it is available in
+// headers also when they are imported in the client
+// project.
+
+
+// AFNetworking
+#define COCOAPODS_POD_AVAILABLE_AFNetworking
+#define COCOAPODS_VERSION_MAJOR_AFNetworking 2
+#define COCOAPODS_VERSION_MINOR_AFNetworking 5
+#define COCOAPODS_VERSION_PATCH_AFNetworking 4
+
+// AFNetworking/NSURLConnection
+#define COCOAPODS_POD_AVAILABLE_AFNetworking_NSURLConnection
+#define COCOAPODS_VERSION_MAJOR_AFNetworking_NSURLConnection 2
+#define COCOAPODS_VERSION_MINOR_AFNetworking_NSURLConnection 5
+#define COCOAPODS_VERSION_PATCH_AFNetworking_NSURLConnection 4
+
+// AFNetworking/NSURLSession
+#define COCOAPODS_POD_AVAILABLE_AFNetworking_NSURLSession
+#define COCOAPODS_VERSION_MAJOR_AFNetworking_NSURLSession 2
+#define COCOAPODS_VERSION_MINOR_AFNetworking_NSURLSession 5
+#define COCOAPODS_VERSION_PATCH_AFNetworking_NSURLSession 4
+
+// AFNetworking/Reachability
+#define COCOAPODS_POD_AVAILABLE_AFNetworking_Reachability
+#define COCOAPODS_VERSION_MAJOR_AFNetworking_Reachability 2
+#define COCOAPODS_VERSION_MINOR_AFNetworking_Reachability 5
+#define COCOAPODS_VERSION_PATCH_AFNetworking_Reachability 4
+
+// AFNetworking/Security
+#define COCOAPODS_POD_AVAILABLE_AFNetworking_Security
+#define COCOAPODS_VERSION_MAJOR_AFNetworking_Security 2
+#define COCOAPODS_VERSION_MINOR_AFNetworking_Security 5
+#define COCOAPODS_VERSION_PATCH_AFNetworking_Security 4
+
+// AFNetworking/Serialization
+#define COCOAPODS_POD_AVAILABLE_AFNetworking_Serialization
+#define COCOAPODS_VERSION_MAJOR_AFNetworking_Serialization 2
+#define COCOAPODS_VERSION_MINOR_AFNetworking_Serialization 5
+#define COCOAPODS_VERSION_PATCH_AFNetworking_Serialization 4
+
+// AFNetworking/UIKit
+#define COCOAPODS_POD_AVAILABLE_AFNetworking_UIKit
+#define COCOAPODS_VERSION_MAJOR_AFNetworking_UIKit 2
+#define COCOAPODS_VERSION_MINOR_AFNetworking_UIKit 5
+#define COCOAPODS_VERSION_PATCH_AFNetworking_UIKit 4
+
+// AHKActionSheet
+#define COCOAPODS_POD_AVAILABLE_AHKActionSheet
+#define COCOAPODS_VERSION_MAJOR_AHKActionSheet 0
+#define COCOAPODS_VERSION_MINOR_AHKActionSheet 5
+#define COCOAPODS_VERSION_PATCH_AHKActionSheet 1
+
+// Bolts
+#define COCOAPODS_POD_AVAILABLE_Bolts
+#define COCOAPODS_VERSION_MAJOR_Bolts 1
+#define COCOAPODS_VERSION_MINOR_Bolts 2
+#define COCOAPODS_VERSION_PATCH_Bolts 0
+
+// Bolts/AppLinks
+#define COCOAPODS_POD_AVAILABLE_Bolts_AppLinks
+#define COCOAPODS_VERSION_MAJOR_Bolts_AppLinks 1
+#define COCOAPODS_VERSION_MINOR_Bolts_AppLinks 2
+#define COCOAPODS_VERSION_PATCH_Bolts_AppLinks 0
+
+// Bolts/Tasks
+#define COCOAPODS_POD_AVAILABLE_Bolts_Tasks
+#define COCOAPODS_VERSION_MAJOR_Bolts_Tasks 1
+#define COCOAPODS_VERSION_MINOR_Bolts_Tasks 2
+#define COCOAPODS_VERSION_PATCH_Bolts_Tasks 0
+
+// FBSDKCoreKit
+#define COCOAPODS_POD_AVAILABLE_FBSDKCoreKit
+#define COCOAPODS_VERSION_MAJOR_FBSDKCoreKit 4
+#define COCOAPODS_VERSION_MINOR_FBSDKCoreKit 4
+#define COCOAPODS_VERSION_PATCH_FBSDKCoreKit 0
+
+// FBSDKCoreKit/arc
+#define COCOAPODS_POD_AVAILABLE_FBSDKCoreKit_arc
+#define COCOAPODS_VERSION_MAJOR_FBSDKCoreKit_arc 4
+#define COCOAPODS_VERSION_MINOR_FBSDKCoreKit_arc 4
+#define COCOAPODS_VERSION_PATCH_FBSDKCoreKit_arc 0
+
+// FBSDKCoreKit/no-arc
+#define COCOAPODS_POD_AVAILABLE_FBSDKCoreKit_no_arc
+#define COCOAPODS_VERSION_MAJOR_FBSDKCoreKit_no_arc 4
+#define COCOAPODS_VERSION_MINOR_FBSDKCoreKit_no_arc 4
+#define COCOAPODS_VERSION_PATCH_FBSDKCoreKit_no_arc 0
+
+// FBSDKLoginKit
+#define COCOAPODS_POD_AVAILABLE_FBSDKLoginKit
+#define COCOAPODS_VERSION_MAJOR_FBSDKLoginKit 4
+#define COCOAPODS_VERSION_MINOR_FBSDKLoginKit 4
+#define COCOAPODS_VERSION_PATCH_FBSDKLoginKit 0
+
+// FBSDKShareKit
+#define COCOAPODS_POD_AVAILABLE_FBSDKShareKit
+#define COCOAPODS_VERSION_MAJOR_FBSDKShareKit 4
+#define COCOAPODS_VERSION_MINOR_FBSDKShareKit 4
+#define COCOAPODS_VERSION_PATCH_FBSDKShareKit 0
+
+// FCFileManager
+#define COCOAPODS_POD_AVAILABLE_FCFileManager
+#define COCOAPODS_VERSION_MAJOR_FCFileManager 1
+#define COCOAPODS_VERSION_MINOR_FCFileManager 0
+#define COCOAPODS_VERSION_PATCH_FCFileManager 12
+
+// FastSocket
+#define COCOAPODS_POD_AVAILABLE_FastSocket
+#define COCOAPODS_VERSION_MAJOR_FastSocket 1
+#define COCOAPODS_VERSION_MINOR_FastSocket 3
+#define COCOAPODS_VERSION_PATCH_FastSocket 0
+
+// GBPing
+#define COCOAPODS_POD_AVAILABLE_GBPing
+#define COCOAPODS_VERSION_MAJOR_GBPing 1
+#define COCOAPODS_VERSION_MINOR_GBPing 1
+#define COCOAPODS_VERSION_PATCH_GBPing 1
+
+// Google-API-Client
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client 422
+
+// Google-API-Client/AdSense
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_AdSense
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_AdSense 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_AdSense 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_AdSense 422
+
+// Google-API-Client/Analytics
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Analytics
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Analytics 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Analytics 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Analytics 422
+
+// Google-API-Client/AppState
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_AppState
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_AppState 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_AppState 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_AppState 422
+
+// Google-API-Client/Bigquery
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Bigquery
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Bigquery 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Bigquery 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Bigquery 422
+
+// Google-API-Client/Blogger
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Blogger
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Blogger 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Blogger 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Blogger 422
+
+// Google-API-Client/Books
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Books
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Books 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Books 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Books 422
+
+// Google-API-Client/Calendar
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Calendar
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Calendar 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Calendar 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Calendar 422
+
+// Google-API-Client/CivicInfo
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_CivicInfo
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_CivicInfo 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_CivicInfo 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_CivicInfo 422
+
+// Google-API-Client/Common
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Common
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Common 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Common 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Common 422
+
+// Google-API-Client/Compute
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Compute
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Compute 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Compute 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Compute 422
+
+// Google-API-Client/Discovery
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Discovery
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Discovery 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Discovery 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Discovery 422
+
+// Google-API-Client/DoubleClickBidManager
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_DoubleClickBidManager
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_DoubleClickBidManager 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_DoubleClickBidManager 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_DoubleClickBidManager 422
+
+// Google-API-Client/Drive
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Drive
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Drive 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Drive 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Drive 422
+
+// Google-API-Client/Gmail
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Gmail
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Gmail 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Gmail 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Gmail 422
+
+// Google-API-Client/Groupssettings
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Groupssettings
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Groupssettings 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Groupssettings 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Groupssettings 422
+
+// Google-API-Client/Licensing
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Licensing
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Licensing 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Licensing 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Licensing 422
+
+// Google-API-Client/MapsEngine
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_MapsEngine
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_MapsEngine 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_MapsEngine 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_MapsEngine 422
+
+// Google-API-Client/Mirror
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Mirror
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Mirror 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Mirror 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Mirror 422
+
+// Google-API-Client/Orkut
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Orkut
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Orkut 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Orkut 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Orkut 422
+
+// Google-API-Client/Plus
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Plus
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Plus 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Plus 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Plus 422
+
+// Google-API-Client/PlusDomains
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_PlusDomains
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_PlusDomains 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_PlusDomains 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_PlusDomains 422
+
+// Google-API-Client/Prediction
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Prediction
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Prediction 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Prediction 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Prediction 422
+
+// Google-API-Client/QPXExpress
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_QPXExpress
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_QPXExpress 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_QPXExpress 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_QPXExpress 422
+
+// Google-API-Client/SQLAdmin
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_SQLAdmin
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_SQLAdmin 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_SQLAdmin 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_SQLAdmin 422
+
+// Google-API-Client/Spectrum
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Spectrum
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Spectrum 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Spectrum 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Spectrum 422
+
+// Google-API-Client/Storage
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Storage
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Storage 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Storage 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Storage 422
+
+// Google-API-Client/Tasks
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Tasks
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Tasks 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Tasks 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Tasks 422
+
+// Google-API-Client/Urlshortener
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_Urlshortener
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_Urlshortener 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_Urlshortener 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_Urlshortener 422
+
+// Google-API-Client/YouTube
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_YouTube
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_YouTube 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_YouTube 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_YouTube 422
+
+// Google-API-Client/YouTubeAnalytics
+#define COCOAPODS_POD_AVAILABLE_Google_API_Client_YouTubeAnalytics
+#define COCOAPODS_VERSION_MAJOR_Google_API_Client_YouTubeAnalytics 1
+#define COCOAPODS_VERSION_MINOR_Google_API_Client_YouTubeAnalytics 0
+#define COCOAPODS_VERSION_PATCH_Google_API_Client_YouTubeAnalytics 422
+
+// NMRangeSlider
+#define COCOAPODS_POD_AVAILABLE_NMRangeSlider
+#define COCOAPODS_VERSION_MAJOR_NMRangeSlider 1
+#define COCOAPODS_VERSION_MINOR_NMRangeSlider 2
+#define COCOAPODS_VERSION_PATCH_NMRangeSlider 1
+
+// NSLogger
+#define COCOAPODS_POD_AVAILABLE_NSLogger
+#define COCOAPODS_VERSION_MAJOR_NSLogger 1
+#define COCOAPODS_VERSION_MINOR_NSLogger 5
+#define COCOAPODS_VERSION_PATCH_NSLogger 1
+
+// NSLogger/Standard
+#define COCOAPODS_POD_AVAILABLE_NSLogger_Standard
+#define COCOAPODS_VERSION_MAJOR_NSLogger_Standard 1
+#define COCOAPODS_VERSION_MINOR_NSLogger_Standard 5
+#define COCOAPODS_VERSION_PATCH_NSLogger_Standard 1
+
+// SDWebImage
+#define COCOAPODS_POD_AVAILABLE_SDWebImage
+#define COCOAPODS_VERSION_MAJOR_SDWebImage 3
+#define COCOAPODS_VERSION_MINOR_SDWebImage 7
+#define COCOAPODS_VERSION_PATCH_SDWebImage 3
+
+// SDWebImage/Core
+#define COCOAPODS_POD_AVAILABLE_SDWebImage_Core
+#define COCOAPODS_VERSION_MAJOR_SDWebImage_Core 3
+#define COCOAPODS_VERSION_MINOR_SDWebImage_Core 7
+#define COCOAPODS_VERSION_PATCH_SDWebImage_Core 3
+
+// UAProgressView
+#define COCOAPODS_POD_AVAILABLE_UAProgressView
+#define COCOAPODS_VERSION_MAJOR_UAProgressView 0
+#define COCOAPODS_VERSION_MINOR_UAProgressView 1
+#define COCOAPODS_VERSION_PATCH_UAProgressView 2
+
+// gtm-http-fetcher
+#define COCOAPODS_POD_AVAILABLE_gtm_http_fetcher
+#define COCOAPODS_VERSION_MAJOR_gtm_http_fetcher 1
+#define COCOAPODS_VERSION_MINOR_gtm_http_fetcher 0
+#define COCOAPODS_VERSION_PATCH_gtm_http_fetcher 141
+
+// gtm-oauth2
+#define COCOAPODS_POD_AVAILABLE_gtm_oauth2
+#define COCOAPODS_VERSION_MAJOR_gtm_oauth2 1
+#define COCOAPODS_VERSION_MINOR_gtm_oauth2 0
+#define COCOAPODS_VERSION_PATCH_gtm_oauth2 126
+
