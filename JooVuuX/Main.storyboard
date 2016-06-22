@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -1915,7 +1915,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFO-0u-yYF">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="InE-fT-uB8">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="InE-fT-uB8">
                                                             <rect key="frame" x="143" y="11" width="315" height="24"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyN-E5-eO0">
@@ -1976,6 +1976,7 @@
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstItem="InE-fT-uB8" firstAttribute="top" secondItem="wFO-0u-yYF" secondAttribute="top" constant="11" id="fkI-Es-L6h"/>
+                                                        <constraint firstItem="InE-fT-uB8" firstAttribute="leading" secondItem="wFO-0u-yYF" secondAttribute="leading" constant="143" id="gi8-PY-Ryp"/>
                                                         <constraint firstAttribute="centerX" secondItem="InE-fT-uB8" secondAttribute="centerX" id="khb-c8-NNn"/>
                                                         <constraint firstAttribute="bottom" secondItem="InE-fT-uB8" secondAttribute="bottom" constant="10" id="xI8-Xv-OHb"/>
                                                     </constraints>
@@ -3394,7 +3395,7 @@
         <image name="zoom-ico" width="31" height="57"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mY7-eL-Le3"/>
-        <segue reference="Omj-E0-g0m"/>
+        <segue reference="ZND-3w-P5F"/>
+        <segue reference="hyi-lW-FbA"/>
     </inferredMetricsTieBreakers>
 </document>

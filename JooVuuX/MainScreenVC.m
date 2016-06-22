@@ -101,13 +101,13 @@
         if ([self.appDelegate isConnected])
         {
             [self startConnectedToCamera];
-            [self connectCamera:@"Connecting please wait" interval:2];
+            [self connectCamera:@"Connecting, please wait" interval:2];
             [self connectCamera:@"Connecting please wait" interval:3];
-            [self connectCamera:@"Connecting please wait" interval:4];
+            [self connectCamera:@"Connecting, please wait" interval:4];
             [self connectCamera:@"Reconnecting..." interval:5];
             [self connectCamera:@"Reconnecting..." interval:6];
             [self performSelector:@selector(getAllInfo) withObject:nil afterDelay:4];
-            [self performSelector:@selector(getAllInfo) withObject:nil afterDelay:7];
+            [self performSelector:@selector(getAllInfo) withObject:nil afterDelay:5];
             [self performSelector:@selector(noConnectionToCamera) withObject:nil afterDelay:9];
         }
         else
@@ -126,7 +126,7 @@
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
     [self.alertLabel setAlpha:0];
     [self.alertLabel setHidden:NO];
-    [self.alertLabel setText:@"Connecting please wait"];
+    [self.alertLabel setText:@"Connecting, please wait"];
     [UIView animateWithDuration:0.4 animations:^{
         [self.alertLabel setAlpha:0.7];
     }];
@@ -136,6 +136,7 @@
     if (![[CameraManager cameraManager] checkToken]) {
         dispatch_queue_t myBackgroundQ = dispatch_queue_create("com.romanHouse.backgroundDelay", NULL);
         // Could also get a global queue; in this case, don't release it below.
+        //dispatch_time_t delay = dispatch_time(DISPATCH_TIME_NOW, interval * NSEC_PER_SEC);
         dispatch_time_t delay = dispatch_time(DISPATCH_TIME_NOW, interval * NSEC_PER_SEC);
         dispatch_after(delay, myBackgroundQ, ^(void){
             [[CameraManager cameraManager] getToken];
@@ -167,8 +168,14 @@
 -(void) noConnectionToCamera
 {
     if (![[CameraManager cameraManager] checkToken]) {
-        [self.alertLabel setText:@"No connect. Please restart camera."];
-        [self performSelector:@selector(hideAlertLabel) withObject:nil afterDelay:2];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Token Error" message:@"Connection fail. Please check on WiFi settings and try to connect again." preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            self.emergency = YES;
+            if (&UIApplicationOpenSettingsURLString != NULL) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];
+            }
+        }]];
+        [self presentViewController:alertController animated:YES completion:nil];
     }
     
     if ([[UIApplication sharedApplication] isIgnoringInteractionEvents]) {
@@ -177,15 +184,15 @@
 }
 -(void) noInternetConnection
 {
-    [self.alertLabel setHidden:NO];
-    [self.alertLabel setText:@"No connect. Check connection."];
-    [self.alertLabel setAlpha:0];
-    [UIView animateWithDuration:0.4 animations:^{
-        [self.alertLabel setAlpha:0.7];
-    } completion:^(BOOL finished) {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Connection Error" message:@"No connect. Please check if JooVuuX is connected in Wifi Settings." preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         self.emergency = YES;
-        [self performSelector:@selector(hideAlertLabel) withObject:nil afterDelay:2];
-    }];
+        if (&UIApplicationOpenSettingsURLString != NULL) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];
+        }
+    }]];
+    [self presentViewController:alertController animated:YES completion:nil];
+    
     if ([[UIApplication sharedApplication] isIgnoringInteractionEvents]) {
         [[UIApplication sharedApplication] endIgnoringInteractionEvents];
     }

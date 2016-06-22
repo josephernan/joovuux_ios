@@ -152,6 +152,7 @@
 -(void)listFileAtPath {
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
         int count;
+        
         NSArray *directoryContent = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:[[FCFileManager pathForDocumentsDirectory] stringByAppendingString:@"/album"] error:NULL];
         for (count = 0; count < (int)[directoryContent count]; count++)
         {

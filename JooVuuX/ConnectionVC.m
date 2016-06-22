@@ -35,15 +35,21 @@
     
 }
 
-
 -(void) alertNoInternetConnection
 {
-    UIAlertView *subAlert = [[UIAlertView alloc] initWithTitle:@""
-                                                       message:@"Connection fail. Check on WiFi settings and try to connect again."
-                                                      delegate:self
-                                             cancelButtonTitle:@"Close"
-                                             otherButtonTitles:nil];
-    [subAlert show];
+    if (![[CameraManager cameraManager] checkToken]) {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Token Error" message:@"Connection fail. Please check on WiFi settings and try to connect again." preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            if (&UIApplicationOpenSettingsURLString != NULL) {
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];
+            }
+        }]];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+    
+    if ([[UIApplication sharedApplication] isIgnoringInteractionEvents]) {
+        [[UIApplication sharedApplication] endIgnoringInteractionEvents];
+    }
 }
 
 -(void) alertConnection

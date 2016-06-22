@@ -171,7 +171,7 @@
                      
                      @{@"audio_mode2":audioCheck?@"on":@"off"},
                      @{@"video_timestamp_mode2":videoTimeStampCheck?@"on":@"off"},
-                     @{@"rotate_video_mode2":rotateDegreesCheck?@"on":@"off"},
+                     @{@"rotate_video_mode2":imageRotationLabel.text},
                      @{@"loop_record_mode2":loopRecordingCheck?@"off":@"on"},
                      @{@"wdr_mode2":wdrCheck?@"off":@"on"}
                      ];
@@ -265,13 +265,7 @@
         videoTimeStampCheck = YES;
     }
     
-    if (![[settings valueForKey:@"rotate_video_mode2"] isEqualToString:@"on"]) {
-        rotateDegreesCheck = NO;
-    }
-    else
-    {
-        rotateDegreesCheck = YES;
-    }
+    imageRotationLabel.text = [settings valueForKey:@"rotate_video_mode2"];
     
     if (![[settings valueForKey:@"loop_record_mode2"] isEqualToString:@"on"]) {
         loopRecordingCheck = YES;
@@ -299,9 +293,6 @@
     //}
 
     
-    
-
-    
     if (!audioCheck)
     {
         [self.audio setTitle:@"OFF" forState:UIControlStateNormal];
@@ -320,16 +311,6 @@
     {
         [self.videoTimeStamp setTitle:@"ON" forState:UIControlStateNormal];
         [self.videoTimeStamp setBackgroundColor:[UIColor colorWithRed:72/256.0 green:216/256.0 blue:183/256.0 alpha:1]];
-    }
-    
-    if (!rotateDegreesCheck)
-    {
-        [self.rotateDegrees setTitle:@"OFF" forState:UIControlStateNormal];
-        [self.rotateDegrees setBackgroundColor:[UIColor colorWithRed:166/256.0 green:166/256.0 blue:166/256.0 alpha:1]];
-    }else
-    {
-        [self.rotateDegrees setTitle:@"ON" forState:UIControlStateNormal];
-        [self.rotateDegrees setBackgroundColor:[UIColor colorWithRed:72/256.0 green:216/256.0 blue:183/256.0 alpha:1]];
     }
     
     if (!loopRecordingCheck)
@@ -656,20 +637,20 @@
 
 
 - (IBAction)rotateDegreesButton:(UIButton *)sender {
-    
-    if (!rotateDegreesCheck) {
-         [[CameraManager cameraManager] params:@"on" type:@"rotate_video_mode2"];
-        [self.rotateDegrees setTitle:@"ON" forState:UIControlStateNormal];
-        [self.rotateDegrees setBackgroundColor:[UIColor colorWithRed:72/256.0 green:216/256.0 blue:183/256.0 alpha:1]];
-        rotateDegreesCheck = YES;
-        
-    } else {
-         [[CameraManager cameraManager] params:@"off" type:@"rotate_video_mode2"];
-        [self.rotateDegrees setTitle:@"OFF" forState:UIControlStateNormal];
-        [self.rotateDegrees setBackgroundColor:[UIColor colorWithRed:166/256.0 green:166/256.0 blue:166/256.0 alpha:1]];
-        rotateDegreesCheck = NO;
-        
-    }
+//    
+//    if (!rotateDegreesCheck) {
+//         [[CameraManager cameraManager] params:@"on" type:@"rotate_video_mode2"];
+//        [self.rotateDegrees setTitle:@"ON" forState:UIControlStateNormal];
+//        [self.rotateDegrees setBackgroundColor:[UIColor colorWithRed:72/256.0 green:216/256.0 blue:183/256.0 alpha:1]];
+//        rotateDegreesCheck = YES;
+//        
+//    } else {
+//         [[CameraManager cameraManager] params:@"off" type:@"rotate_video_mode2"];
+//        [self.rotateDegrees setTitle:@"OFF" forState:UIControlStateNormal];
+//        [self.rotateDegrees setBackgroundColor:[UIColor colorWithRed:166/256.0 green:166/256.0 blue:166/256.0 alpha:1]];
+//        rotateDegreesCheck = NO;
+//        
+//    }
 }
 
 - (IBAction)loopRecordingButton:(UIButton *)sender {
@@ -1084,7 +1065,7 @@
         [[CameraManager cameraManager] resetAllSettings:@"2560x1080 30P 21:9" type:@"video_resolution_mode2"];
         [[CameraManager cameraManager] resetAllSettings:@"on" type:@"audio_mode2"];
         [[CameraManager cameraManager] resetAllSettings:@"on" type:@"video_timestamp_mode2"];
-        [[CameraManager cameraManager] resetAllSettings:@"on" type:@"rotate_video_mode2"];
+        [[CameraManager cameraManager] resetAllSettings:@"normal" type:@"rotate_video_mode2"];
         [[CameraManager cameraManager] resetAllSettings:@"on" type:@"loop_record_mode2"];
             
         [[CameraManager cameraManager] resetAllSettings:@"S.Fine" type:@"video_quality_mode2"];
@@ -1225,9 +1206,9 @@
     }
 }
 - (IBAction)imageRotationOneButton:(UIButton *)sender {
-    imageRotationLabel.text = @"Normal";
+    imageRotationLabel.text = @"normal";
     
-    [[CameraManager cameraManager] params:@"Normal" type:@"Image Rotation"];
+    [[CameraManager cameraManager] params:@"normal" type:@"rotate_video_mode2"];
     
     for (UITableViewCell * cell in imageRotationCellArray) {
         [self cell:cell setHidden:YES];
@@ -1236,9 +1217,9 @@
     }
 }
 - (IBAction)imageRotationTwoButton:(UIButton *)sender {
-    imageRotationLabel.text = @"180";
+    imageRotationLabel.text = @"180 degree";
     
-    [[CameraManager cameraManager] params:@"180" type:@"Image Rotation"];
+    [[CameraManager cameraManager] params:@"180 degree" type:@"rotate_video_mode2"];
     
     for (UITableViewCell * cell in imageRotationCellArray) {
         [self cell:cell setHidden:YES];
@@ -1247,9 +1228,9 @@
     }
 }
 - (IBAction)imageRotationThreeButton:(UIButton *)sender {
-    imageRotationLabel.text = @"Auto";
+    imageRotationLabel.text = @"auto rotation";
     
-    [[CameraManager cameraManager] params:@"Auto" type:@"Image Rotation"];
+    [[CameraManager cameraManager] params:@"auto rotation" type:@"rotate_video_mode2"];
     
     for (UITableViewCell * cell in imageRotationCellArray) {
         [self cell:cell setHidden:YES];

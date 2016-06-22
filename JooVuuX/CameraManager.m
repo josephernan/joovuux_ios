@@ -62,20 +62,25 @@
         char bytes[1024];
         count = [[self createSocket] receiveBytes:bytes count:1024];
         NSString *received = [[NSString alloc] initWithBytes:bytes length:count encoding:NSUTF8StringEncoding];
+        NSRange firstPos = [received rangeOfString:@"}"];
+        if(firstPos.location != NSNotFound)
+            received = [received substringToIndex:firstPos.location+1];
+        
         NSLog(@"Get token recive  -  %@\n", received);
         
         NSData *jsonData = [received dataUsingEncoding:NSUTF8StringEncoding];
         if (jsonData) {
-            id json = [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
-            if (![json objectForKey:@"param"]) {
+            NSArray *json = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:nil];
+            
+            if (![json valueForKey:@"param"]) {
                 self.checkToken = NO;
                 return nil;
             }
             else
             {
-                self.token = [json objectForKey:@"param"];
+                self.token = [json valueForKey:@"param"];
                 self.checkToken = YES;
-                NSLog(@"TOKEN = %@\n", [json objectForKey:@"param"]);
+                NSLog(@"TOKEN = %@\n", self.token);
                 return self.token;
             }
         }
@@ -544,10 +549,13 @@
 {
     self.imageCount = self.imageName.count;
     self.progress = 0;
+    //Remove previous files of path
+//    [FCFileManager removeFilesInDirectoryAtPath:[[FCFileManager pathForDocumentsDirectory] stringByAppendingString:@"/album"]];
+//    [FCFileManager createDirectoriesForPath:[[FCFileManager pathForDocumentsDirectory] stringByAppendingString:@"/album"]];
     
     for (int i = 0 ; i < self.movieName.count; i++) {
         NSString * movieName = [self.movieName objectAtIndex:i];
-        [FCFileManager createDirectoriesForPath:[[FCFileManager pathForDocumentsDirectory] stringByAppendingString:@"/album"]];
+        
         NSString *path = [[[FCFileManager pathForDocumentsDirectory] stringByAppendingString:@"/album/"] stringByAppendingString:movieName];
         BOOL testFileExists = [FCFileManager existsItemAtPath:path];
         NSLog(@"%@", path);
@@ -562,7 +570,7 @@
     
     for (int i = 0 ; i < self.imageName.count; i++) {
         NSString * imageName = [self.imageName objectAtIndex:i];
-        [FCFileManager createDirectoriesForPath:[[FCFileManager pathForDocumentsDirectory] stringByAppendingString:@"/album"]];
+//        [FCFileManager createDirectoriesForPath:[[FCFileManager pathForDocumentsDirectory] stringByAppendingString:@"/album"]];
         NSString *path = [[[FCFileManager pathForDocumentsDirectory] stringByAppendingString:@"/album/"] stringByAppendingString:imageName];
         BOOL testFileExists = [FCFileManager existsItemAtPath:path];
         NSLog(@"%@", path);
