@@ -40,6 +40,10 @@
     if (![[CameraManager cameraManager] checkToken]) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Token Error" message:@"Connection fail. Please check on WiFi settings and try to connect again." preferredStyle:UIAlertControllerStyleAlert];
         [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            
+        }]];
+        
+        [alertController addAction:[UIAlertAction actionWithTitle:@"WIFI Settings" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             if (&UIApplicationOpenSettingsURLString != NULL) {
                 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];
             }

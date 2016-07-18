@@ -31,6 +31,8 @@
     BOOL speedStampCheck;
     BOOL timeModeCheck;
     BOOL speedUnitCheck;
+    BOOL powerOffDisconnectCheck;
+    BOOL lowBatteryWarningCheck;
 }
 @property (nonatomic,retain) AppDelegate *appDelegate;
 @property(strong, nonatomic)UIView * bgrdResetView;
@@ -132,7 +134,13 @@
         [self reloadDataAnimated:NO];
         speedUnitCheck = YES;
     }
-
+    
+    for (UITableViewCell * cell in self.powerOffDisconnectCollection) {
+        [self cell:cell setHidden:YES];
+        [self reloadDataAnimated:NO];
+        powerOffDisconnectCheck = YES;
+    }
+    
     [self cell:self.motionDetectionCell setHidden:YES];
     motionDetectionCheck = YES;
     [self cell:self.carNumberCell setHidden:YES];
@@ -186,27 +194,33 @@
     if ([self.appDelegate isConnected]) {
         if ([[[CameraManager cameraManager] allSettingsDict] isKindOfClass:[NSMutableDictionary class]]) {
             NSArray * dict = [[NSArray alloc] init];
-            dict = @[
-                     @{@"speed_unit":self.speedUnitDestinationLabel.text},
-                     @{@"motion_det_sens":self.motionDetectionSensDestinationLabel.text},
-                     @{@"standby_time":self.standByDestinationLabel.text},
-                     @{@"spinnerPowerOnAutoRecord":self.powerOnDestinationLabel.text},
-                     @{@"default_mode":self.defaultModeDestinationLabel.text},
-                     @{@"data_format":self.dateFormatLabelDestination.text},
-                     @{@"time_mode_start_time":self.fromTimeLabel.text},
-                     @{@"time_mode_finish_time":self.toTimeLabel.text},
-                     @{@"toggleCarNumber":self.carNumberTextField.text},
-                     @{@"wifi_password":self.WiFiPasswordTextField.text},
-                     @{@"motion_detection":motionDetectionCheck?@"off":@"on"},
-                     @{@"g_sensor":GSensorCheck?@"off":@"on"},
-                     @{@"car_plate_stamp":carPlateStampCheck?@"off":@"on"},
-                     @{@"speed_stamp":speedStampCheck?@"on":@"off"},
-                     @{@"time_mode":timeModeCheck?@"off":@"on"},
-                     @{@"toggleBeepNoises":beepNoisesCheck?@"on":@"off"},
-                     @{@"toggleRecordingLEDindicator":recordLEDCheck?@"off":@"on"},
-                     ];
+            @try {
+                dict = @[
+                         @{@"speed_unit":self.speedUnitDestinationLabel.text},
+                         @{@"motion_det_sens":self.motionDetectionSensDestinationLabel.text},
+                         @{@"standby_time":self.standByDestinationLabel.text},
+                         @{@"spinnerPowerOnAutoRecord":self.powerOnDestinationLabel.text},
+                         @{@"default_mode":self.defaultModeDestinationLabel.text},
+                         @{@"data_format":self.dateFormatLabelDestination.text},
+                         @{@"time_mode_start_time":self.fromTimeLabel.text},
+                         @{@"time_mode_finish_time":self.toTimeLabel.text},
+                         @{@"toggleCarNumber":self.carNumberTextField.text},
+                         @{@"wifi_password":self.WiFiPasswordTextField.text},
+                         @{@"motion_detection":motionDetectionCheck?@"off":@"on"},
+                         @{@"g_sensor":GSensorCheck?@"off":@"on"},
+                         @{@"car_plate_stamp":carPlateStampCheck?@"off":@"on"},
+                         @{@"speed_stamp":speedStampCheck?@"on":@"off"},
+                         @{@"time_mode":timeModeCheck?@"off":@"on"},
+                         @{@"toggleBeepNoises":beepNoisesCheck?@"on":@"off"},
+                         @{@"toggleRecordingLEDindicator":recordLEDCheck?@"off":@"on"},
+                         @{@"power_off_disconnect":self.PoweroffDisconnectDestinationLabel.text},
+                         @{@"low_battery_warning":lowBatteryWarningCheck?@"on":@"off"},
+                         ];
+                
+                [[[CameraManager cameraManager] allSettingsDict] setObject:dict forKey:@"mainSettings"];
+            }
+            @catch (NSException * __unused exception) {}
             
-            [[[CameraManager cameraManager] allSettingsDict] setObject:dict forKey:@"mainSettings"];
         }
        
     }
@@ -234,6 +248,7 @@
     self.motionDetectionSensDestinationLabel.text = [settings valueForKey:@"motion_det_sens"];
     self.standByDestinationLabel.text = [settings valueForKey:@"standby_time"];
     self.powerOnDestinationLabel.text = [settings valueForKey:@"spinnerPowerOnAutoRecord"];
+    self.PoweroffDisconnectDestinationLabel.text = [settings valueForKey:@"power_off_disconnect"];
     self.defaultModeDestinationLabel.text = [settings valueForKey:@"default_mode"];
     self.dateFormatLabelDestination.text = [settings valueForKey:@"data_format"];
     self.fromTimeLabel.text = [settings valueForKey:@"time_mode_start_time"];
@@ -299,7 +314,13 @@
         recordLEDCheck = NO;
     }
 
-
+    if (![[settings valueForKey:@"low_battery_warning"] isEqualToString:@"on"]) {
+        lowBatteryWarningCheck = NO;
+    }
+    else
+    {
+        lowBatteryWarningCheck = YES;
+    }
 
     if (!motionDetectionCheck) {
         [self.motionDetection setTitle:@"ON" forState:UIControlStateNormal];
@@ -917,6 +938,41 @@
 
 - (IBAction)speedUnitButton:(UIButton *)sender {
     [self showSpeedUnitCollection];
+}
+
+- (IBAction)poweroffDisconnectButton:(id)sender {
+    if (powerOffDisconnectCheck) {
+        for (UITableViewCell * cell in self.powerOffDisconnectCollection) {
+            [self cell:cell setHidden:NO];
+            [self reloadDataAnimated:YES];
+            powerOffDisconnectCheck = NO;
+            
+        }
+    } else {
+        
+        for (UITableViewCell * cell in self.powerOffDisconnectCollection) {
+            [self cell:cell setHidden:YES];
+            [self reloadDataAnimated:YES];
+            powerOffDisconnectCheck = YES;
+            
+        }
+    }
+}
+
+- (IBAction)lowBatteryWarningButton:(UIButton *)sender {
+    if (!lowBatteryWarningCheck) {
+        [[CameraManager cameraManager] params:@"on" type:@"low_battery_warning"];
+        [self.btnLowBatteryWarning setTitle:@"ON" forState:UIControlStateNormal];
+        [self.btnLowBatteryWarning setBackgroundColor:[UIColor colorWithRed:72/256.0 green:216/256.0 blue:183/256.0 alpha:1]];
+        lowBatteryWarningCheck = YES;
+        
+    }
+    else {
+        [[CameraManager cameraManager] params:@"off" type:@"low_battery_warning"];
+        [self.btnLowBatteryWarning setTitle:@"OFF" forState:UIControlStateNormal];
+        [self.btnLowBatteryWarning setBackgroundColor:[UIColor colorWithRed:166/256.0 green:166/256.0 blue:166/256.0 alpha:1]];
+        lowBatteryWarningCheck = NO;
+    }
 }
 
 
@@ -1553,22 +1609,6 @@
             
             [[CameraManager cameraManager] resetAllSettings];
             
-//            [[CameraManager cameraManager] resetAllSettings:@"DDMMYYY" type:@"data_format"];
-//            [[CameraManager cameraManager] resetAllSettings:@"on" type:@"toggleBeepNoises"];
-//            [[CameraManager cameraManager] resetAllSettings:@"on" type:@"toggleRecordingLEDindicator"];
-//            [[CameraManager cameraManager] resetAllSettings:@"mode1" type:@"default_mode"];
-//            [[CameraManager cameraManager] resetAllSettings:@"Auto start" type:@"spinnerPowerOnAutoRecord"];
-//            [[CameraManager cameraManager] resetAllSettings:@"1_min" type:@"standby_time"];
-//            [[CameraManager cameraManager] resetAllSettings:@"3_sec" type:@"power_off_disconnect"];
-//            [[CameraManager cameraManager] resetAllSettings:@"off" type:@"motion_detection"];
-//            //[[CameraManager cameraManager] resetAllSettings:@"high" type:@"motion_det_sens"];
-//            [[CameraManager cameraManager] resetAllSettings:@"PAL" type:@"tv_type"];
-//            [[CameraManager cameraManager] resetAllSettings:@"on" type:@"g_sensor"];
-//            [[CameraManager cameraManager] resetAllSettings:@"High" type:@"g_sensor_sensitivity"];
-//            [[CameraManager cameraManager] resetAllSettings:@"off" type:@"car_plate_stamp"];
-//            [[CameraManager cameraManager] resetAllSettings:@"off" type:@"speed_stamp"];
-//            [[CameraManager cameraManager] resetAllSettings:@"off" type:@"time_mode"];
-//            [[CameraManager cameraManager] resetAllSettings:@"AUTO" type:@"flicker"];
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -1682,7 +1722,9 @@
             [self.timeMode setBackgroundColor:[UIColor colorWithRed:166/256.0 green:166/256.0 blue:166/256.0 alpha:1]];
             timeModeCheck = YES;
             
-            
+            lowBatteryWarningCheck = NO;
+            [self.btnLowBatteryWarning setTitle:@"OFF" forState:UIControlStateNormal];
+            [self.btnLowBatteryWarning setBackgroundColor:[UIColor colorWithRed:166/256.0 green:166/256.0 blue:166/256.0 alpha:1]];
             
             [self.indicator stopAnimating];
             self.bgrdResetView.hidden = YES;
@@ -1786,4 +1828,27 @@
     return YES;
 }
 
+
+- (IBAction)choosePoweroffFButton:(UIButton *)sender {
+    self.PoweroffDisconnectDestinationLabel.text = self.choosePoweroffFLabel.text;
+    [[CameraManager cameraManager] params:@"1 sec" type:@"power_off_disconnect"];
+    for (UITableViewCell * cell in self.powerOffDisconnectCollection) {
+        [self cell:cell setHidden:YES];
+        [self reloadDataAnimated:YES];
+        powerOffDisconnectCheck = YES;
+    }
+    
+}
+
+
+- (IBAction)choosePoweroffSButton:(UIButton *)sender {
+    self.PoweroffDisconnectDestinationLabel.text = self.choosePoweroffSLabel.text;
+    [[CameraManager cameraManager] params:@"10 sec" type:@"power_off_disconnect"];
+    for (UITableViewCell * cell in self.powerOffDisconnectCollection) {
+        [self cell:cell setHidden:YES];
+        [self reloadDataAnimated:YES];
+        powerOffDisconnectCheck = YES;
+    }
+
+}
 @end

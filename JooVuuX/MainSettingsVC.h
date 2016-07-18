@@ -31,6 +31,8 @@
 - (IBAction)speedStampButton:(UIButton *)sender;
 - (IBAction)timeModeButton:(UIButton *)sender;
 - (IBAction)speedUnitButton:(UIButton *)sender;
+- (IBAction)poweroffDisconnectButton:(UIButton *)sender;
+- (IBAction)lowBatteryWarningButton:(UIButton *)sender;
 
 @property (weak, nonatomic) IBOutlet UIButton *timeMode;
 @property (weak, nonatomic) IBOutlet UIButton *syncDateAndTimeButton;
@@ -40,6 +42,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *GSensor;
 @property (weak, nonatomic) IBOutlet UIButton *carPlateStamp;
 @property (weak, nonatomic) IBOutlet UIButton *speedStamp;
+@property (weak, nonatomic) IBOutlet UIButton *btnLowBatteryWarning;
 
 
 @property (weak, nonatomic) IBOutlet UITableViewCell *syncDateAndTimeCell;
@@ -59,7 +62,7 @@
 @property (strong, nonatomic) IBOutletCollection(UITableViewCell) NSArray *GSensorSCollection;
 @property (strong, nonatomic) IBOutletCollection(UITableViewCell) NSArray *timeModeCell;
 @property (strong, nonatomic) IBOutletCollection(UITableViewCell) NSArray *speedUnitCollection;
-
+@property (strong, nonatomic) IBOutletCollection(UITableViewCell) NSArray *powerOffDisconnectCollection;
 
 
 //// SET DATA AND ALL SHIT
@@ -134,6 +137,13 @@
 - (IBAction)chooseTVOutFButton:(UIButton *)sender;
 - (IBAction)chooseTVOutSButton:(UIButton *)sender;
 /////////////////////////////
+
+@property (weak, nonatomic) IBOutlet UILabel *PoweroffDisconnectDestinationLabel;
+@property (weak, nonatomic) IBOutlet UILabel *choosePoweroffFLabel;
+@property (weak, nonatomic) IBOutlet UILabel *choosePoweroffSLabel;
+- (IBAction)choosePoweroffFButton:(UIButton *)sender;
+- (IBAction)choosePoweroffSButton:(UIButton *)sender;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *GSensorDestinationLabel;
 @property (weak, nonatomic) IBOutlet UILabel *chooseGSensorFLabel;

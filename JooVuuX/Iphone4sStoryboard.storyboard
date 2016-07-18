@@ -299,7 +299,7 @@
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App version: 1.0.8" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O9b-3P-YWK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App version: 1.0.9" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O9b-3P-YWK">
                                         <rect key="frame" x="8" y="58" width="287" height="33"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -819,7 +819,7 @@
                         <sections>
                             <tableViewSection id="aAz-S2-uOI">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Vcj-fp-TSj">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Vcj-fp-TSj" userLabel="Reset Settings">
                                         <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vcj-fp-TSj" id="hQP-HC-OsA">
@@ -858,7 +858,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.71678614297990551" green="0.72465422331274765" blue="0.7316074346405228" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="taJ-Xt-HHz">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="taJ-Xt-HHz" userLabel="SyncDate and Time">
                                         <rect key="frame" x="0.0" y="108" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="taJ-Xt-HHz" id="uho-mG-ZIO">
@@ -897,7 +897,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.71678614299999999" green="0.72465422329999996" blue="0.7316074346" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="gc3-az-iS0">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="gc3-az-iS0" userLabel="CameraTime">
                                         <rect key="frame" x="0.0" y="152" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gc3-az-iS0" id="8lx-Xx-vfg">
@@ -941,7 +941,7 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Kz7-Fy-KfW">
+                                    <tableViewCell tag="1" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Kz7-Fy-KfW" userLabel="DateFormat">
                                         <rect key="frame" x="0.0" y="196" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kz7-Fy-KfW" id="7eU-l3-1YP">
@@ -985,7 +985,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.77106159369505811" green="0.77952544950502189" blue="0.7870051619132501" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="BBK-vE-Upv">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="BBK-vE-Upv" userLabel="DateFormat1">
                                         <rect key="frame" x="0.0" y="240" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BBK-vE-Upv" id="Rui-O7-rWH">
@@ -1022,7 +1022,7 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="0oD-NA-nAW">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="0oD-NA-nAW" userLabel="DateFormat2">
                                         <rect key="frame" x="0.0" y="284" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0oD-NA-nAW" id="08l-lJ-gA5">
@@ -1059,7 +1059,7 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="63y-aj-gmO">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="63y-aj-gmO" userLabel="DateFormat3">
                                         <rect key="frame" x="0.0" y="328" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="63y-aj-gmO" id="cMR-c9-y5S">
@@ -1096,7 +1096,7 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Cjz-hB-hf4">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Cjz-hB-hf4" userLabel="BeepNoises">
                                         <rect key="frame" x="0.0" y="372" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cjz-hB-hf4" id="Fgr-zG-ama">
@@ -1137,7 +1137,7 @@
                                             <color key="backgroundColor" red="0.75681622076875199" green="0.76512370673304675" blue="0.77246523135769452" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="hdW-rg-6XM">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="hdW-rg-6XM" userLabel="RecordingLed">
                                         <rect key="frame" x="0.0" y="416" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hdW-rg-6XM" id="xbV-Px-imf">
@@ -1178,7 +1178,7 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="3tT-wQ-PmO">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="3tT-wQ-PmO" userLabel="DefaultModeCameraStarts">
                                         <rect key="frame" x="0.0" y="460" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3tT-wQ-PmO" id="Gnd-6I-L2q">
@@ -1222,7 +1222,7 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Mag-BG-7CI">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Mag-BG-7CI" userLabel="DefaultMode1">
                                         <rect key="frame" x="0.0" y="504" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mag-BG-7CI" id="gRx-sN-KpL">
@@ -1259,7 +1259,7 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="kNZ-TQ-dqA">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="kNZ-TQ-dqA" userLabel="DefaultMode2">
                                         <rect key="frame" x="0.0" y="548" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kNZ-TQ-dqA" id="P5f-hn-eY8">
@@ -1296,7 +1296,7 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="29L-hJ-vuj">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="29L-hJ-vuj" userLabel="PowerOnAutoRecord">
                                         <rect key="frame" x="0.0" y="592" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="29L-hJ-vuj" id="pZ6-N2-RRD">
@@ -1340,7 +1340,7 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="WvT-t8-Pm0">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="WvT-t8-Pm0" userLabel="PowerOnAutoRecord1">
                                         <rect key="frame" x="0.0" y="636" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WvT-t8-Pm0" id="s5d-Rc-b7q">
@@ -1377,7 +1377,7 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="iR5-MW-aXn">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="iR5-MW-aXn" userLabel="PowerOnAutoRecord2">
                                         <rect key="frame" x="0.0" y="680" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iR5-MW-aXn" id="WwV-0w-V3k">
@@ -1414,7 +1414,7 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="o8p-bg-iKZ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="o8p-bg-iKZ" userLabel="StandByTime">
                                         <rect key="frame" x="0.0" y="724" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o8p-bg-iKZ" id="Uz1-8i-GMT">
@@ -1458,7 +1458,7 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="3lB-Of-1Id">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="3lB-Of-1Id" userLabel="StandByTime1">
                                         <rect key="frame" x="0.0" y="768" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3lB-Of-1Id" id="5rE-rO-dCm">
@@ -1495,7 +1495,7 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="1DL-Rl-GQU">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="1DL-Rl-GQU" userLabel="StandByTime2">
                                         <rect key="frame" x="0.0" y="812" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1DL-Rl-GQU" id="sLf-v5-vZq">
@@ -1532,7 +1532,7 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="cjv-UN-VV7">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="cjv-UN-VV7" userLabel="StandByTime3">
                                         <rect key="frame" x="0.0" y="856" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cjv-UN-VV7" id="wxo-PU-fCl">
@@ -1569,7 +1569,7 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Vex-ht-aHe">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Vex-ht-aHe" userLabel="StandByTime4">
                                         <rect key="frame" x="0.0" y="900" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vex-ht-aHe" id="Lf7-zv-Tvv">
@@ -1606,8 +1606,126 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="vif-Eg-Wsj">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="JGq-q6-hWE" userLabel="PowerOffDisconnect">
                                         <rect key="frame" x="0.0" y="944" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JGq-q6-hWE" id="bb5-Et-rgz">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="aV8-rs-IvV">
+                                                    <rect key="frame" x="2" y="1" width="316" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Power-Off Disconnect" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zl0-hD-I9y">
+                                                            <rect key="frame" x="8" y="0.0" width="167" height="42"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 sec" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4j7-Ti-L2J">
+                                                            <rect key="frame" x="215" y="0.0" width="93" height="42"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zIs-b5-okf">
+                                                            <rect key="frame" x="0.0" y="0.0" width="316" height="42"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <state key="normal">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="poweroffDisconnectButton:" destination="Ofp-51-kXb" eventType="touchUpInside" id="YxM-VE-ldb"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="0YG-zc-b7E" userLabel="PowerOffDisconnect1">
+                                        <rect key="frame" x="0.0" y="988" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0YG-zc-b7E" id="59Q-dO-97g">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="Aof-yh-xlE">
+                                                    <rect key="frame" x="2" y="1" width="316" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 sec" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9AL-Jk-lqM">
+                                                            <rect key="frame" x="215" y="0.0" width="93" height="42"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ko0-FD-pK9">
+                                                            <rect key="frame" x="0.0" y="0.0" width="316" height="42"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <state key="normal">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="choosePoweroffFButton:" destination="Ofp-51-kXb" eventType="touchUpInside" id="qP3-bW-FUd"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Mlr-lT-X8R" userLabel="PowerOffDisconnect2">
+                                        <rect key="frame" x="0.0" y="1032" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mlr-lT-X8R" id="nPX-Tw-Ph7">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="sAz-LW-9Hy">
+                                                    <rect key="frame" x="2" y="1" width="316" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 sec" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OeC-NC-ARX">
+                                                            <rect key="frame" x="215" y="0.0" width="93" height="42"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zbv-BT-mVQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="316" height="42"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <state key="normal">
+                                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="choosePoweroffSButton:" destination="Ofp-51-kXb" eventType="touchUpInside" id="0E9-br-ZOj"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="vif-Eg-Wsj" userLabel="MotionDetection">
+                                        <rect key="frame" x="0.0" y="1076" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vif-Eg-Wsj" id="CNn-d0-92e">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -1647,8 +1765,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="IDB-9f-zUs">
-                                        <rect key="frame" x="0.0" y="988" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="IDB-9f-zUs" userLabel="Motion DetectionSensitivity">
+                                        <rect key="frame" x="0.0" y="1120" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IDB-9f-zUs" id="4g1-Pf-WQH">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -1691,8 +1809,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="iVE-Cp-mjZ">
-                                        <rect key="frame" x="0.0" y="1032" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="iVE-Cp-mjZ" userLabel="MotionDetection1">
+                                        <rect key="frame" x="0.0" y="1164" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iVE-Cp-mjZ" id="q1h-Sx-UvL">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -1728,8 +1846,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Xpd-2X-ZMJ">
-                                        <rect key="frame" x="0.0" y="1076" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Xpd-2X-ZMJ" userLabel="MotionDetection2">
+                                        <rect key="frame" x="0.0" y="1208" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xpd-2X-ZMJ" id="do5-DP-BXw">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -1765,8 +1883,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="5pA-LC-IME">
-                                        <rect key="frame" x="0.0" y="1120" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="5pA-LC-IME" userLabel="MotionDetection3">
+                                        <rect key="frame" x="0.0" y="1252" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5pA-LC-IME" id="BBe-bq-H2N">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -1802,8 +1920,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Izo-Xz-FXW">
-                                        <rect key="frame" x="0.0" y="1164" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Izo-Xz-FXW" userLabel="TVOut">
+                                        <rect key="frame" x="0.0" y="1296" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Izo-Xz-FXW" id="ds8-zc-hwu">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -1846,8 +1964,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="611-VY-gcy">
-                                        <rect key="frame" x="0.0" y="1208" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="611-VY-gcy" userLabel="TVOut1">
+                                        <rect key="frame" x="0.0" y="1340" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="611-VY-gcy" id="Xjp-iI-Tju">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -1883,8 +2001,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="SMA-e0-OMb">
-                                        <rect key="frame" x="0.0" y="1252" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="SMA-e0-OMb" userLabel="TVOut2">
+                                        <rect key="frame" x="0.0" y="1384" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SMA-e0-OMb" id="NK2-bF-7YY">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -1920,8 +2038,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="rKs-kz-W4f">
-                                        <rect key="frame" x="0.0" y="1296" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="rKs-kz-W4f" userLabel="GSensor">
+                                        <rect key="frame" x="0.0" y="1428" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rKs-kz-W4f" id="gTc-ir-3LA">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -1961,8 +2079,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="QX0-a9-Vjg">
-                                        <rect key="frame" x="0.0" y="1340" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="QX0-a9-Vjg" userLabel="GSensorSensivity">
+                                        <rect key="frame" x="0.0" y="1472" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QX0-a9-Vjg" id="YTi-on-Rwm">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -2005,8 +2123,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="th7-3Z-02T">
-                                        <rect key="frame" x="0.0" y="1384" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="th7-3Z-02T" userLabel="GSensorSensivity1">
+                                        <rect key="frame" x="0.0" y="1516" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="th7-3Z-02T" id="3SE-Fc-meD">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -2042,8 +2160,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="LtJ-h0-aLu">
-                                        <rect key="frame" x="0.0" y="1428" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="LtJ-h0-aLu" userLabel="GSensorSensivity2">
+                                        <rect key="frame" x="0.0" y="1560" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LtJ-h0-aLu" id="5rS-HE-hWW">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -2079,8 +2197,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="IEx-zh-fup">
-                                        <rect key="frame" x="0.0" y="1472" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="IEx-zh-fup" userLabel="GSensorSensivity3">
+                                        <rect key="frame" x="0.0" y="1604" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IEx-zh-fup" id="inh-pW-bpl">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -2116,8 +2234,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="COv-6m-dmO">
-                                        <rect key="frame" x="0.0" y="1516" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="COv-6m-dmO" userLabel="CarPlateStamp">
+                                        <rect key="frame" x="0.0" y="1648" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="COv-6m-dmO" id="7hw-42-Kai">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -2158,7 +2276,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="7qi-gn-Ikq">
-                                        <rect key="frame" x="0.0" y="1560" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="1692" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7qi-gn-Ikq" id="DfU-gR-gpe">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -2209,7 +2327,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="K8O-kW-BYP">
-                                        <rect key="frame" x="0.0" y="1604" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="1736" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="K8O-kW-BYP" id="J3m-jD-mG8">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -2258,8 +2376,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="BXA-kX-4dv">
-                                        <rect key="frame" x="0.0" y="1648" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="BXA-kX-4dv" userLabel="SpeedStamp">
+                                        <rect key="frame" x="0.0" y="1780" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BXA-kX-4dv" id="EF6-Jg-jUa">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -2300,7 +2418,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="avU-mI-XDq">
-                                        <rect key="frame" x="0.0" y="1692" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="1824" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="avU-mI-XDq" id="rkA-Lh-uJl">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -2343,8 +2461,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Zr5-SS-ME9">
-                                        <rect key="frame" x="0.0" y="1736" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="Zr5-SS-ME9" userLabel="SpeedUnit1">
+                                        <rect key="frame" x="0.0" y="1868" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zr5-SS-ME9" id="7Yb-Fh-kKe">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -2380,8 +2498,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="B42-qb-Gm7">
-                                        <rect key="frame" x="0.0" y="1780" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="B42-qb-Gm7" userLabel="SpeedUnit2">
+                                        <rect key="frame" x="0.0" y="1912" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B42-qb-Gm7" id="Im9-jt-OWV">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -2417,8 +2535,49 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="uL3-yQ-orz">
-                                        <rect key="frame" x="0.0" y="1824" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="fmg-Cz-3i0" userLabel="LowBatteryWarning">
+                                        <rect key="frame" x="0.0" y="1956" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fmg-Cz-3i0" id="a90-BC-cVj">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" id="A82-WL-6cI">
+                                                    <rect key="frame" x="2" y="1" width="316" height="42"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Low Battery Warning" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UDv-px-tgq">
+                                                            <rect key="frame" x="8" y="0.0" width="182" height="42"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pH9-8w-jHk">
+                                                            <rect key="frame" x="236" y="0.0" width="80" height="42"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" red="0.65098039220000004" green="0.65098039220000004" blue="0.65098039220000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                            <state key="normal" title="OFF">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                <color key="titleShadowColor" red="0.49803921569999998" green="0.49803921569999998" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                            <state key="selected" title="OFF">
+                                                                <color key="titleColor" red="0.43207465280000001" green="0.43207465280000001" blue="0.43207465280000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="lowBatteryWarningButton:" destination="Ofp-51-kXb" eventType="touchUpInside" id="0wd-Gt-l5d"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="uL3-yQ-orz" userLabel="TimedMode">
+                                        <rect key="frame" x="0.0" y="2000" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uL3-yQ-orz" id="h0Q-bU-bLD">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -2458,8 +2617,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="USq-Bp-RTT">
-                                        <rect key="frame" x="0.0" y="1868" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="USq-Bp-RTT" userLabel="FromTime">
+                                        <rect key="frame" x="0.0" y="2044" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="USq-Bp-RTT" id="z6J-4c-zqL">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -2502,8 +2661,8 @@
                                             <color key="backgroundColor" red="0.75681622079999999" green="0.76512370669999996" blue="0.77246523140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="fj1-tU-sIf">
-                                        <rect key="frame" x="0.0" y="1912" width="320" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="44" id="fj1-tU-sIf" userLabel="ToTime">
+                                        <rect key="frame" x="0.0" y="2088" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fj1-tU-sIf" id="JHb-xs-jOW">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -2569,10 +2728,12 @@
                         <outlet property="GSensor" destination="Idm-mQ-O1g" id="nx4-Pi-O2z"/>
                         <outlet property="GSensorCell" destination="QX0-a9-Vjg" id="wg1-zb-PYr"/>
                         <outlet property="GSensorDestinationLabel" destination="bjx-nn-xGL" id="fRP-8k-THa"/>
+                        <outlet property="PoweroffDisconnectDestinationLabel" destination="4j7-Ti-L2J" id="fsm-c0-pik"/>
                         <outlet property="TVOutDestinationLabel" destination="G1q-Kf-bHd" id="AuE-d7-XCA"/>
                         <outlet property="WiFiPasswordCell" destination="K8O-kW-BYP" id="bwM-XM-P4U"/>
                         <outlet property="WiFiPasswordTextField" destination="bp3-ur-Pbx" id="yd5-69-IAH"/>
                         <outlet property="beepNioses" destination="vTn-5x-iQj" id="b6N-He-EQ6"/>
+                        <outlet property="btnLowBatteryWarning" destination="pH9-8w-jHk" id="1Xe-pj-dW3"/>
                         <outlet property="cameraTimeDestinationLabel" destination="kOx-Lh-VRW" id="hha-IU-OZn"/>
                         <outlet property="carNumberCell" destination="7qi-gn-Ikq" id="WYe-aJ-5ea"/>
                         <outlet property="carNumberTextField" destination="lK5-F9-zCu" id="4xh-90-S4P"/>
@@ -2586,6 +2747,8 @@
                         <outlet property="chooseGSensorSLabel" destination="gGw-fx-dDf" id="zma-Sy-rVg"/>
                         <outlet property="chooseGSensorTLabel" destination="X7c-Mc-FjS" id="wa0-tz-vXr"/>
                         <outlet property="choosePowerOnFLabel" destination="Njn-F2-9Xx" id="kpA-2k-fjT"/>
+                        <outlet property="choosePoweroffFLabel" destination="9AL-Jk-lqM" id="rHO-TL-EgV"/>
+                        <outlet property="choosePoweroffSLabel" destination="OeC-NC-ARX" id="TVZ-Su-Uyt"/>
                         <outlet property="chooseSpeedUnitFLabel" destination="bKa-YP-wWA" id="MEa-LQ-NOZ"/>
                         <outlet property="chooseSpeedUnitSLabel" destination="ccs-8F-3t8" id="j5Y-VY-LxZ"/>
                         <outlet property="chooseStandByFlabel" destination="Y2Y-D7-W4Z" id="bEf-FQ-k4W"/>
@@ -2639,6 +2802,8 @@
                         <outletCollection property="speedUnitCollection" destination="Zr5-SS-ME9" id="Oli-yD-my7"/>
                         <outletCollection property="speedUnitCollection" destination="B42-qb-Gm7" id="QGN-oS-f9X"/>
                         <outletCollection property="DateFormatCollection" destination="63y-aj-gmO" id="2XU-3y-nYg"/>
+                        <outletCollection property="powerOffDisconnectCollection" destination="0YG-zc-b7E" id="bBw-zA-2ar"/>
+                        <outletCollection property="powerOffDisconnectCollection" destination="Mlr-lT-X8R" id="tP9-Ig-73S"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zS9-VJ-ur1" userLabel="First Responder" sceneMemberID="firstResponder"/>

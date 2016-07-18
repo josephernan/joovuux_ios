@@ -364,7 +364,8 @@
         if ([string rangeOfString:@"jpg"].location != NSNotFound) {
             [self.imageName addObject:string];
         }
-        if ([string rangeOfString:@"thm"].location != NSNotFound) {
+//        if ([string rangeOfString:@"thm"].location != NSNotFound) {
+        else{
             [self.movieName addObject:string];
         }
     }

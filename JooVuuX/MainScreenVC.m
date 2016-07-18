@@ -102,13 +102,13 @@
         {
             [self startConnectedToCamera];
             [self connectCamera:@"Connecting, please wait" interval:2];
-            [self connectCamera:@"Connecting please wait" interval:3];
+            [self connectCamera:@"Connecting, please wait" interval:3];
             [self connectCamera:@"Connecting, please wait" interval:4];
             [self connectCamera:@"Reconnecting..." interval:5];
             [self connectCamera:@"Reconnecting..." interval:6];
             [self performSelector:@selector(getAllInfo) withObject:nil afterDelay:4];
             [self performSelector:@selector(getAllInfo) withObject:nil afterDelay:5];
-            [self performSelector:@selector(noConnectionToCamera) withObject:nil afterDelay:9];
+            [self performSelector:@selector(noConnectionToCamera) withObject:nil afterDelay:10];
         }
         else
         {
@@ -170,7 +170,9 @@
     if (![[CameraManager cameraManager] checkToken]) {
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Token Error" message:@"Connection fail. Please check on WiFi settings and try to connect again." preferredStyle:UIAlertControllerStyleAlert];
         [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-            self.emergency = YES;
+            [self performSelector:@selector(showAlertLabel) withObject:nil afterDelay:0.8];
+        }]];
+         [alertController addAction:[UIAlertAction actionWithTitle:@"WIFI Settings" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             if (&UIApplicationOpenSettingsURLString != NULL) {
                 [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];
             }
@@ -186,6 +188,9 @@
 {
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Connection Error" message:@"No connect. Please check if JooVuuX is connected in Wifi Settings." preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+    }]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"WIFI Settings" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         self.emergency = YES;
         if (&UIApplicationOpenSettingsURLString != NULL) {
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"prefs:root=WIFI"]];

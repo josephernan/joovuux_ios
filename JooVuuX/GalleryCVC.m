@@ -177,7 +177,8 @@
                     [self.tempItemArray addObject:curDict];
                 }
             }
-            if ([fileName rangeOfString:@"thm"].location != NSNotFound) {
+//            if ([fileName rangeOfString:@"thm"].location != NSNotFound) {
+            else{
                 NSMutableDictionary * curDict = [NSMutableDictionary new];
                 if (![fileSize isEqualToNumber:[NSNumber numberWithLong:0]]) {
                    UIImage * videoImage = [self vidImage:fileURL];
