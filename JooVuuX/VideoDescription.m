@@ -11,9 +11,9 @@
 #import <AVFoundation/AVFoundation.h>
 #import "AHKActionSheet.h"
 #import "Utils.h"
-#import "GTMOAuth2ViewControllerTouch.h"
+//#import "GTMOAuth2ViewControllerTouch.h"
 
-#import <FBSDKShareKit.h>
+#import "FBSDKShareKit.h"
 //#import <TwitterKit/TwitterKit.h>
 
 #import "MKInputBoxView.h"
@@ -133,12 +133,12 @@
     if (self.descriptionVideo == nil || [self.descriptionVideo isEqualToString:@""]) {
         self.descriptionVideo = @"Uploaded from YouTube Direct Lite iOS";
     }
-    [self isAutorizated];
-    
-    [self.uploadVideo uploadYouTubeVideoWithService:_youtubeService
-                                           fileData:fileData
-                                              title:self.titleVideo
-                                        description:self.descriptionVideo];
+//    [self isAutorizated];
+//    
+//    [self.uploadVideo uploadYouTubeVideoWithService:_youtubeService
+//                                           fileData:fileData
+//                                              title:self.titleVideo
+//                                        description:self.descriptionVideo];
 }
 
 
@@ -267,60 +267,60 @@
 
 #pragma mark - AutorizationYOuTube
 
--(void) isAutorizated
-{
-    self.youtubeService = [[GTLServiceYouTube alloc] init];
-    self.youtubeService.authorizer =
-    [GTMOAuth2ViewControllerTouch authForGoogleFromKeychainForName:kKeychainItemName
-                                                          clientID:kClientID
-                                                      clientSecret:kClientSecret];
-    if (![self isAuthorized]) {
-        [[self navigationController] pushViewController:[self createAuthController] animated:YES];
-    }
+//-(void) isAutorizated
+//{
+////    self.youtubeService = [[GTLServiceYouTube alloc] init];
+////    self.youtubeService.authorizer =
+////    [GTMOAuth2ViewControllerTouch authForGoogleFromKeychainForName:kKeychainItemName
+////                                                          clientID:kClientID
+////                                                      clientSecret:kClientSecret];
+//    if (![self isAuthorized]) {
+//        [[self navigationController] pushViewController:[self createAuthController] animated:YES];
+//    }
+//
+//}
 
-}
-
-- (IBAction)startOAuthFlow:(id)sender {
-    GTMOAuth2ViewControllerTouch *viewController;
-    
-    viewController = [[GTMOAuth2ViewControllerTouch alloc]
-                      initWithScope:kGTLAuthScopeYouTube
-                      clientID:kClientID
-                      clientSecret:kClientSecret
-                      keychainItemName:kKeychainItemName
-                      delegate:self
-                      finishedSelector:@selector(viewController:finishedWithAuth:error:)];
-    
-    [[self navigationController] pushViewController:viewController animated:YES];
-}
-
-- (BOOL)isAuthorized {
-    return [((GTMOAuth2Authentication *)self.youtubeService.authorizer) canAuthorize];
-}
-
-- (GTMOAuth2ViewControllerTouch *)createAuthController
-{
-    GTMOAuth2ViewControllerTouch *authController;
-    
-    authController = [[GTMOAuth2ViewControllerTouch alloc] initWithScope:kGTLAuthScopeYouTube
-                                                                clientID:kClientID
-                                                            clientSecret:kClientSecret
-                                                        keychainItemName:kKeychainItemName
-                                                                delegate:self
-                                                        finishedSelector:@selector(viewController:finishedWithAuth:error:)];
-    return authController;
-}
-
-- (void)viewController:(GTMOAuth2ViewControllerTouch *)viewController
-      finishedWithAuth:(GTMOAuth2Authentication *)authResult
-                 error:(NSError *)error {
-    if (error != nil) {
-        [Utils showAlert:@"Authentication Error" message:error.localizedDescription];
-        self.youtubeService.authorizer = nil;
-    } else {
-        self.youtubeService.authorizer = authResult;
-    }
-}
+//- (IBAction)startOAuthFlow:(id)sender {
+////    GTMOAuth2ViewControllerTouch *viewController;
+////    
+////    viewController = [[GTMOAuth2ViewControllerTouch alloc]
+////                      initWithScope:kGTLAuthScopeYouTube
+////                      clientID:kClientID
+////                      clientSecret:kClientSecret
+////                      keychainItemName:kKeychainItemName
+////                      delegate:self
+////                      finishedSelector:@selector(viewController:finishedWithAuth:error:)];
+////    
+////    [[self navigationController] pushViewController:viewController animated:YES];
+//}
+//
+//- (BOOL)isAuthorized {
+//    return [((GTMOAuth2Authentication *)self.youtubeService.authorizer) canAuthorize];
+//}
+//
+//- (GTMOAuth2ViewControllerTouch *)createAuthController
+//{
+//    GTMOAuth2ViewControllerTouch *authController;
+//    
+//    authController = [[GTMOAuth2ViewControllerTouch alloc] initWithScope:kGTLAuthScopeYouTube
+//                                                                clientID:kClientID
+//                                                            clientSecret:kClientSecret
+//                                                        keychainItemName:kKeychainItemName
+//                                                                delegate:self
+//                                                        finishedSelector:@selector(viewController:finishedWithAuth:error:)];
+//    return authController;
+//}
+//
+//- (void)viewController:(GTMOAuth2ViewControllerTouch *)viewController
+//      finishedWithAuth:(GTMOAuth2Authentication *)authResult
+//                 error:(NSError *)error {
+//    if (error != nil) {
+//        [Utils showAlert:@"Authentication Error" message:error.localizedDescription];
+//        self.youtubeService.authorizer = nil;
+//    } else {
+//        self.youtubeService.authorizer = authResult;
+//    }
+//}
 
 #pragma mark - initPlayer
 

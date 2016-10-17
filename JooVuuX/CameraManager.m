@@ -8,7 +8,7 @@
 
 #import "CameraManager.h"
 #import "VideoGalleryObject.h"
-#import <FCFileManager.h>
+#import "FCFileManager.h"
 @implementation CameraManager
 
 +(CameraManager *) cameraManager
@@ -92,6 +92,7 @@
     }
     else
     {
+        self.checkToken = YES;
         return self.token;
     }
     

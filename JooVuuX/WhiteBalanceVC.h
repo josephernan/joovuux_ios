@@ -21,7 +21,4 @@
 
 - (IBAction)resetAllSettings:(UIButton *)sender;
 
-
-
-
 @end

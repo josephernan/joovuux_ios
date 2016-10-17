@@ -21,7 +21,7 @@
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "JooVuuX.xcworkspace",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
     {
-      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jpmobiledev91\/joovuux_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mobilewin0215\/joovuux_ios.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0058A3349D2A7326D03AA87CC6B6705F812598AE"
     },

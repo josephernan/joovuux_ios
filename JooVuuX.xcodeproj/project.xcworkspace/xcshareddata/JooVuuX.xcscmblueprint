@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "0058A3349D2A7326D03AA87CC6B6705F812598AE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "009441AEA45783F3E1DBA87A2A20CD73C48B54F5" : 0,
+    "0058A3349D2A7326D03AA87CC6B6705F812598AE" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "631B7C8B-5F9B-4DFB-AF83-5D843939412D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "009441AEA45783F3E1DBA87A2A20CD73C48B54F5" : "JooVuux_iOS\/kxmovie\/",
+    "0058A3349D2A7326D03AA87CC6B6705F812598AE" : "JooVuux_iOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "JooVuuX",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "JooVuuX.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mobilewin0215\/joovuux_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0058A3349D2A7326D03AA87CC6B6705F812598AE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kolyvan\/kxmovie.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "009441AEA45783F3E1DBA87A2A20CD73C48B54F5"
+    }
+  ]
+}

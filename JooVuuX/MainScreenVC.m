@@ -101,14 +101,14 @@
         if ([self.appDelegate isConnected])
         {
             [self startConnectedToCamera];
-            [self connectCamera:@"Connecting, please wait" interval:2];
-            [self connectCamera:@"Connecting, please wait" interval:3];
-            [self connectCamera:@"Connecting, please wait" interval:4];
+            [self connectCamera:@"Connecting, please wait" interval:1];
+//            [self connectCamera:@"Connecting, please wait" interval:3];
+//            [self connectCamera:@"Connecting, please wait" interval:4];
             [self connectCamera:@"Reconnecting..." interval:5];
-            [self connectCamera:@"Reconnecting..." interval:6];
-            [self performSelector:@selector(getAllInfo) withObject:nil afterDelay:4];
-            [self performSelector:@selector(getAllInfo) withObject:nil afterDelay:5];
-            [self performSelector:@selector(noConnectionToCamera) withObject:nil afterDelay:10];
+//            [self connectCamera:@"Reconnecting..." interval:6];
+//            [self performSelector:@selector(getAllInfo) withObject:nil afterDelay:4];
+            [self performSelector:@selector(getAllInfo) withObject:nil afterDelay:3];
+            [self performSelector:@selector(noConnectionToCamera) withObject:nil afterDelay:5];
         }
         else
         {
@@ -150,6 +150,9 @@
 }
 -(void) getAllInfo
 {
+    if (![[CameraManager cameraManager] checkToken])
+        [[CameraManager cameraManager] getToken];
+    
     if ([[CameraManager cameraManager] checkToken]) {
         [self.alertLabel setText:@"Get all settings"];
         dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
@@ -168,7 +171,7 @@
 -(void) noConnectionToCamera
 {
     if (![[CameraManager cameraManager] checkToken]) {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Token Error" message:@"Connection fail. Please check on WiFi settings and try to connect again." preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Token Error" message:@"Failed in getting token from Camera. Please check on WiFi settings and try to connect JooVuuX again." preferredStyle:UIAlertControllerStyleAlert];
         [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
             [self performSelector:@selector(showAlertLabel) withObject:nil afterDelay:0.8];
         }]];
@@ -186,7 +189,7 @@
 }
 -(void) noInternetConnection
 {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Connection Error" message:@"No connect. Please check if JooVuuX is connected in Wifi Settings." preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Connection error" message:@"Failed in finding JooVuuX camera. Please check if JooVuuX is connected in Wifi Settings." preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         
     }]];

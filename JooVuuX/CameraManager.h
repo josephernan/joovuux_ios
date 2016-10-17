@@ -7,16 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <FastSocket.h>
+#import "FastSocket.h"
 #import "StreamVC.h"
 
+//NSString *CAMERA_IP_ADDR = @"192.168.42.1";
 
 @interface CameraManager : NSObject 
 {
     long count;
-    
-}
 
+}
 
 @property (strong, nonatomic) NSTimer * timer;
 

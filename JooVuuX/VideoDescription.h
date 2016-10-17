@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "CellObject.h"
 
-#import <FBSDKShareKit.h>
-#import <FBSDKShareVideoContent.h>
+#import "FBSDKShareKit.h"
+#import "FBSDKShareVideoContent.h"
 
 #import "VideoData.h"
 #import "YouTubeUploadVideo.h"
 
-@interface VideoDescription : UIViewController <YouTubeUploadVideoDelegate, UITextFieldDelegate>
+@interface VideoDescription : UIViewController < UITextFieldDelegate>
 
 
 @property BOOL facebookPresed;
@@ -27,7 +27,7 @@
 
 - (IBAction)shareVideo:(UIBarButtonItem *)sender;
 
-@property(nonatomic, retain) GTLServiceYouTube *youtubeService;
+//@property(nonatomic, retain) GTLServiceYouTube *youtubeService;
 @property(nonatomic, strong) YouTubeUploadVideo *uploadVideo;
 
 @property (strong, nonatomic) NSString * titleVideo;

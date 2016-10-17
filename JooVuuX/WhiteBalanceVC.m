@@ -8,7 +8,7 @@
 
 #import "WhiteBalanceVC.h"
 #import "KAProgressLabel.h"
-#import <NMRangeSlider.h>
+#import "NMRangeSlider.h"
 #import "CameraManager.h"
 #import "AppDelegate.h"
 @interface WhiteBalanceVC ()
@@ -26,6 +26,8 @@
 
 - (IBAction)whiteBalance:(NMRangeSlider*)sender;
 @property (strong, nonatomic) IBOutlet NMRangeSlider *whiteBalance;
+@property (weak, nonatomic) IBOutlet NMRangeSlider *saturationSlider;
+- (IBAction)onSaturationChange:(NMRangeSlider*)sender;
 
 
 @property (weak,nonatomic) IBOutlet KAProgressLabel * pLabel;
@@ -36,6 +38,9 @@
 
 @property (strong, nonatomic) NSString * string;
 
+@property (weak, nonatomic) IBOutlet UILabel *lblSaturationVal;
+@property (weak, nonatomic) IBOutlet UILabel *lblContrastVal;
+@property (weak, nonatomic) IBOutlet UILabel *lblSharpnessVal;
 
 
 @end
@@ -134,18 +139,25 @@
     };
 
     [self configureMetalThemeForSlider:self.sharpness];
-    self.sharpness.upperValue = 0;
-    self.sharpness.maximumValue = 2;
+    self.sharpness.upperValue = 3;
+    self.sharpness.maximumValue = 6;
     self.sharpness.lowerHandleHidden = YES;
     self.sharpness.stepValue = 1;
     self.sharpness.stepValueContinuously = YES;
     
     [self configureMetalThemeForSlider:self.contrast];
-    self.contrast.upperValue = 0;
-    self.contrast.maximumValue = 2;
+    self.contrast.upperValue = 128;
+    self.contrast.maximumValue = 256;
     self.contrast.lowerHandleHidden = YES;
     self.contrast.stepValue = 1;
     self.contrast.stepValueContinuously = YES;
+    
+    [self configureMetalThemeForSlider:self.saturationSlider];
+    self.saturationSlider.upperValue = 128;
+    self.saturationSlider.maximumValue = 256;
+    self.saturationSlider.lowerHandleHidden = YES;
+    self.saturationSlider.stepValue = 1;
+    self.saturationSlider.stepValueContinuously = YES;
     
     [self configureMetalThemeForSlider:self.whiteBalance];
     self.whiteBalance.upperValue = 0;
@@ -166,14 +178,13 @@
     [[NSUserDefaults standardUserDefaults] setFloat:delta forKey:@"exposureDeltaKEY"];
     [[NSUserDefaults standardUserDefaults] setFloat:self.sharpness.upperValue forKey:@"sharpnessUpperKEY"];
     [[NSUserDefaults standardUserDefaults] setFloat:self.contrast.upperValue forKey:@"contrastUpperKEY"];
+    [[NSUserDefaults standardUserDefaults] setFloat:self.saturationSlider.upperValue forKey:@"saturationUpperKEY"];
     [[NSUserDefaults standardUserDefaults] setFloat:self.whiteBalance.upperValue forKey:@"whiteBalanceUpperKEY"];
 }
 
 -(void) loadSettings
 {
     NSLog(@"%f",[[NSUserDefaults standardUserDefaults] floatForKey:@"exposureDeltaKEY"]);
-
-    
     
     [self.backLabel setEndDegree:[[NSUserDefaults standardUserDefaults] floatForKey:@"exposureDeltaKEY"]];
     [self.curcleLabel setEndDegree:[[NSUserDefaults standardUserDefaults] floatForKey:@"exposureDeltaKEY"]];
@@ -200,13 +211,14 @@
     UILabel * contrastLabel = [self.contrastLabelCollection objectAtIndex:contrast];
     [contrastLabel setTextColor:[UIColor colorWithRed:49.0 / 256.0 green:195.0 / 256.0 blue:165.0 / 256.0 alpha:1]];
     
+    int saturation = [[NSUserDefaults standardUserDefaults] floatForKey:@"saturationUpperKEY"];
+    [self.saturationSlider setUpperValue:saturation animated:YES];
+    
     int whiteBalance = [[NSUserDefaults standardUserDefaults] floatForKey:@"whiteBalanceUpperKEY"];
     [self.whiteBalance setUpperValue:whiteBalance animated:YES];
     UILabel * whiteBalanceLabel = [self.whiteBalanceCollection objectAtIndex:whiteBalance];
     [whiteBalanceLabel setTextColor:[UIColor colorWithRed:49.0 / 256.0 green:195.0 / 256.0 blue:165.0 / 256.0 alpha:1]];
 }
-
-
 
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -231,31 +243,31 @@
     checkInt = [self.pLabel.text floatValue];
     
     if (checkInt >= 1.8f && checkInt <= 2.0f) {
-        [[CameraManager cameraManager] params:@"+2.0" type:@"Exposure"];
+        [[CameraManager cameraManager] params:@"+2.0" type:@"exposure"];
     }else if (checkInt >= 1.4f  && checkInt <= 1.7f) {
-        [[CameraManager cameraManager] params:@"+1.7" type:@"Exposure"];
+        [[CameraManager cameraManager] params:@"+1.7" type:@"exposure"];
     }else if (checkInt >= 1.1f  && checkInt <= 1.3f) {
-        [[CameraManager cameraManager] params:@"+1.3" type:@"Exposure"];
+        [[CameraManager cameraManager] params:@"+1.3" type:@"exposure"];
     }else if (checkInt >= 0.8f  && checkInt <= 1.0f) {
-        [[CameraManager cameraManager] params:@"+1.0" type:@"Exposure"];
+        [[CameraManager cameraManager] params:@"+1.0" type:@"exposure"];
     }else if (checkInt >= 0.4f  && checkInt <= 0.7f) {
-        [[CameraManager cameraManager] params:@"+0.7" type:@"Exposure"];
+        [[CameraManager cameraManager] params:@"+0.7" type:@"exposure"];
     }else if (checkInt >= 0.1f  && checkInt <= 0.3f) {
-        [[CameraManager cameraManager] params:@"+0.3" type:@"Exposure"];
+        [[CameraManager cameraManager] params:@"+0.3" type:@"exposure"];
     }else if (checkInt >= -0.2f  && checkInt <= 0.0f) {
-        [[CameraManager cameraManager] params:@"0.0" type:@"Exposure"];
+        [[CameraManager cameraManager] params:@"0.0" type:@"exposure"];
     }else if (checkInt >= -0.6f  && checkInt <= -0.3f) {
-        [[CameraManager cameraManager] params:@"-0.3" type:@"Exposure"];
+        [[CameraManager cameraManager] params:@"-0.3" type:@"exposure"];
     }else if (checkInt >= -0.9f  && checkInt <= -0.7f) {
-        [[CameraManager cameraManager] params:@"-0.7" type:@"Exposure"];
+        [[CameraManager cameraManager] params:@"-0.7" type:@"exposure"];
     }else if (checkInt >= -1.2f  && checkInt <= -1.0f) {
-        [[CameraManager cameraManager] params:@"-1.0" type:@"Exposure"];
+        [[CameraManager cameraManager] params:@"-1.0" type:@"exposure"];
     }else if (checkInt >= -1.6f  && checkInt <= -1.3f) {
-        [[CameraManager cameraManager] params:@"-1.3" type:@"Exposure"];
+        [[CameraManager cameraManager] params:@"-1.3" type:@"exposure"];
     }else if (checkInt >= -1.9f  && checkInt <= -1.7f) {
-        [[CameraManager cameraManager] params:@"-1.7" type:@"Exposure"];
+        [[CameraManager cameraManager] params:@"-1.7" type:@"exposure"];
     }else if (checkInt < -1.9f) {
-        [[CameraManager cameraManager] params:@"-2.0" type:@"Exposure"];
+        [[CameraManager cameraManager] params:@"-2.0" type:@"exposure"];
     }
 }
 
@@ -310,38 +322,34 @@
 
 - (IBAction)sharpness:(NMRangeSlider *)sender
 {
-    [self setLabelColorInSortedSharpnessArray:self.sharpnessLabelCollection slider:self.sharpness valueForKey:nil reset:NO];
-    
-    if (sender.upperValue == 0) {
-        [[CameraManager cameraManager ] params:@"SOFT" type:@"Sharpness"];
-    } else if (sender.upperValue == 1) {
-        [[CameraManager cameraManager ] params:@"STANDARD" type:@"Sharpness"];
-    } else if (sender.upperValue == 2){
-        [[CameraManager cameraManager ] params:@"HARD" type:@"Sharpness"];
-    }
+    NSString * strVal = [[NSNumber numberWithFloat:sender.upperValue] stringValue];
+    [[CameraManager cameraManager ] params:strVal type:@"sharpness"];
+    self.lblSharpnessVal.text = strVal;
 }
 
 - (IBAction)contrast:(NMRangeSlider *)sender
 {
-    [self setLabelColorInSortedContrastArray:self.contrastLabelCollection slider:self.contrast valueForKey:nil reset:NO];
-    if (sender.upperValue == 0) {
-        [[CameraManager cameraManager ] params:@"SOFT" type:@"Contrast"];
-    } else if (sender.upperValue == 1) {
-        [[CameraManager cameraManager ] params:@"STANDARD" type:@"Contrast"];
-    } else if (sender.upperValue == 2){
-        [[CameraManager cameraManager ] params:@"HARD" type:@"Contrast"];
-    }
+    NSString * strVal = [[NSNumber numberWithFloat:sender.upperValue] stringValue];
+    [[CameraManager cameraManager ] params:strVal type:@"contrast"];
+    self.lblContrastVal.text = strVal;
+}
+
+- (IBAction)onSaturationChange:(NMRangeSlider *)sender {
+
+    NSString * strVal = [[NSNumber numberWithFloat:sender.upperValue] stringValue];
+    [[CameraManager cameraManager ] params:strVal type:@"saturation"];
+    self.lblSaturationVal.text = strVal;
 }
 
 - (IBAction)whiteBalance:(NMRangeSlider *)sender
 {
     [self setLabelColorInSortedWhiteBalanceArray:self.whiteBalanceCollection slider:self.whiteBalance valueForKey:nil reset:NO];
     if (sender.upperValue == 0) {
-        [[CameraManager cameraManager ] params:@"AUTO" type:@"wb"];
+        [[CameraManager cameraManager ] params:@"AUTO" type:@"white_balance"];
     }else if (sender.upperValue == 1) {
-        [[CameraManager cameraManager ] params:@"SUNNY" type:@"wb"];
+        [[CameraManager cameraManager ] params:@"SUNNY" type:@"white_balance"];
     }else if (sender.upperValue == 2){
-        [[CameraManager cameraManager ] params:@"CLOUDY" type:@"wb"];
+        [[CameraManager cameraManager ] params:@"CLOUDY" type:@"white_balance"];
     }
 }
 
@@ -393,7 +401,6 @@
                                                       delegate:self
                                              cancelButtonTitle:@"Close"
                                              otherButtonTitles:nil];
-    
     [subAlert show];
 }
 
@@ -411,35 +418,35 @@
     dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
         
         if ([self.appDelegate isConnected]) {
-            [[CameraManager cameraManager ] resetAllSettings:@"AUTO" type:@"wb"];
-            [[CameraManager cameraManager ] resetAllSettings:@"STANDART" type:@"Contrast"];
-            [[CameraManager cameraManager ] resetAllSettings:@"STANDART" type:@"Sharpness"];
-            [[CameraManager cameraManager] resetAllSettings:@"0.0" type:@"Exposure"];
+            [[CameraManager cameraManager ] resetAllSettings:@"AUTO" type:@"white_balance"];
+            [[CameraManager cameraManager ] resetAllSettings:@"64" type:@"contrast"];
+            [[CameraManager cameraManager ] resetAllSettings:@"3" type:@"sharpness"];
+            [[CameraManager cameraManager ] resetAllSettings:@"64" type:@"saturation"];
+            [[CameraManager cameraManager] resetAllSettings:@"0.0" type:@"exposure"];
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            
-            self.sharpness.upperValue = value;
             
             for (UILabel * label in self.sharpnessLabelCollection) {
                 [label setTextColor:[UIColor blackColor]];
             }
             
-            [self.sharpness setUpperValue:value animated:YES];
+            [self.sharpness setUpperValue:3 animated:YES];
+            self.lblSharpnessVal.text = @"3";
+            
             UILabel * label = [self.sharpnessLabelCollection objectAtIndex:value];
             [label setTextColor:[UIColor colorWithRed:49.0 / 256.0 green:195.0 / 256.0 blue:165.0 / 256.0 alpha:1]];
-            
-            
-            self.contrast.upperValue = value;
             
             for (UILabel * label1 in self.contrastLabelCollection) {
                 [label1 setTextColor:[UIColor blackColor]];
             }
             
-            [self.contrast setUpperValue:value animated:YES];
+            [self.contrast setUpperValue:64 animated:YES];
+            self.lblContrastVal.text = @"64";
+            [self.saturationSlider setUpperValue:64 animated:YES];
+            self.lblSaturationVal.text = @"64";
             UILabel * label1 = [self.contrastLabelCollection objectAtIndex:value];
             [label1 setTextColor:[UIColor colorWithRed:49.0 / 256.0 green:195.0 / 256.0 blue:165.0 / 256.0 alpha:1]];
-            
             
             self.whiteBalance.upperValue = WB;
             
@@ -451,13 +458,9 @@
             UILabel * label3 = [self.whiteBalanceCollection objectAtIndex:WB];
             [label3 setTextColor:[UIColor colorWithRed:49.0 / 256.0 green:195.0 / 256.0 blue:165.0 / 256.0 alpha:1]];
             
-            
-            
             [self.backLabel setEndDegree:179.0f];
             [self.curcleLabel setEndDegree:179.0f];
             [self.pLabel setEndDegree:179.0f];
-            
-            
             
             [self alertResetSettings];
   
@@ -475,5 +478,6 @@
     
     self.resetAllSettingsLabel.backgroundColor = [UIColor colorWithRed:149/256.0 green:149/256.0 blue:149/256.0 alpha:1];
 }
+
 
 @end
